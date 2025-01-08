@@ -20,20 +20,21 @@ dicas = [
     "Dica 6: Pequenos detalhes podem mudar o curso de tudo.",
     "Dica 7: Um momento decisivo envolve decisões difíceis.",
     "Dica 8: Às vezes, a melhor maneira de viajar é sem sair do lugar.",
+    "Dica 9: Grandes aventuras podem começar quando as luzes se apagam.",
     "Dica 10: O grande momento chegou!"
 ]
 
 # Função para exibir a dica do dia
 def exibir_dica():
     hoje = datetime.datetime.now()
-    dia_10_janeiro = datetime.datetime(hoje.year, 1, 10)
+    dia_surpresa = datetime.datetime(hoje.year, 1, 8)  # Definido como dia 8 de janeiro
     
-    if hoje <= dia_10_janeiro:
+    if hoje < dia_surpresa:
         dias_ate_surpresa = (hoje - datetime.datetime(hoje.year, 1, 1)).days
         if dias_ate_surpresa < len(dicas):
             return dicas[dias_ate_surpresa]
-        else:
-            return "O grande momento chegou!"
+    elif hoje.date() == dia_surpresa.date():
+        return "O grande momento chegou!"
     else:
         return "A data já passou!"
 
@@ -52,7 +53,7 @@ if dica_atual == "O grande momento chegou!":
     senha_informada = st.text_input("Digite a senha para revelar o segredo:", type="password")
     
     if senha_informada == senha:
-        st.markdown(f'<h1 style="color: purple; text-align: center;">{segredo}</h1>', unsafe_allow_html=True)
+        st.markdown(f'<h1 style="color: pink; text-align: center;">{segredo}</h1>', unsafe_allow_html=True)
         st.balloons()  # Efeito de confetes
     elif senha_informada:
         st.error("Senha incorreta. Tente novamente!")
