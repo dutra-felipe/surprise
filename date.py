@@ -19,8 +19,7 @@ dicas = [
     "Dica 5: Algo que parece impossível, na verdade, é muito possível.",
     "Dica 6: Pequenos detalhes podem mudar o curso de tudo.",
     "Dica 7: Um momento decisivo envolve decisões difíceis.",
-    "Dica 8: Grandes aventuras podem começar quando as luzes se apagam.",
-    "Dica 9: Às vezes, a maior força vem de onde menos se espera.",
+    "Dica 8: Às vezes, a melhor maneira de viajar é sem sair do lugar.",
     "Dica 10: O grande momento chegou!"
 ]
 
